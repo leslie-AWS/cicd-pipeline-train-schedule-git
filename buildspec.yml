@@ -15,3 +15,9 @@ phases:
     post_build:
         commands:
             - echo Executing post build phase
+artifacts:
+  type: 
+  files:
+    - 'dist/cicd-pipeline-train-schedule-git/**/*'
+    - appspec.yml
+    - 'scripts/**/*'
