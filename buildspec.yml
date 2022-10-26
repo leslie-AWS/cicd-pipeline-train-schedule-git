@@ -20,7 +20,7 @@ phases:
         commands:
             - echo Executing post build phase
 artifacts:
-  files:
+  files: 
     - '**/*'
     - appspec.yml
     - 'scripts/**/*'
