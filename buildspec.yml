@@ -3,12 +3,16 @@ version: 0.2
 phases:
     install:
         runtime-versions:
-            nodejs: latest
+            nodejs: 16
         commands:
             - echo Executing Install phase
+            # Install dependencies needed for running tests
+            - npm install
     pre_build:
         commands:
             - echo Executing pre build phase
+            # Discover and run unit tests in the 'tests' directory
+            - npm test
     build:
         commands:
             - echo Executing Build phase
@@ -17,6 +21,7 @@ phases:
             - echo Executing post build phase
 artifacts:
   files:
-    - 'dist/cicd-pipeline-train-schedule-git/**/*'
+    - '**/*'
     - appspec.yml
     - 'scripts/**/*'
+    - 'views/**/*'

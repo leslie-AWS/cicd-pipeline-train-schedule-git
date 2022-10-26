@@ -1,13 +1,15 @@
 version: 0.0
 os: linux	
 files:	
-  - source: dist/cicd-pipeline-train-schedule-git  
-    destination: /var/www/cicd-pipeline-train-schedule-git    
+  - source: / 
+    destination: /home/ubuntu/cicd-pipeline-train-schedule-git    
 hooks:	
   BeforeInstall:	 
     - location: scripts/install_dependencies	   
-      timeout: 300	          
+      timeout: 300
+      runas : root	          
     - location: scripts/start_server	    
-      timeout: 300	     
+      timeout: 300	
+      runas : root     
             
 
