@@ -11,8 +11,6 @@ phases:
     pre_build:
         commands:
             - echo Executing pre build phase
-            # Discover and run unit tests in the 'tests' directory
-            - npm start
     build:
         commands:
             - echo Executing Build phase
