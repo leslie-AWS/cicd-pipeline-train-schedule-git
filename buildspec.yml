@@ -7,7 +7,7 @@ phases:
         commands:
             - echo Executing Install phase
             # Install dependencies needed for running tests
-            - npm install
+            - sudo apt install npm
     pre_build:
         commands:
             - echo Executing pre build phase
@@ -22,4 +22,4 @@ artifacts:
     - '**/*'
     - appspec.yml
     - 'scripts/**/*'
-    - 'views/**/*'
+   
